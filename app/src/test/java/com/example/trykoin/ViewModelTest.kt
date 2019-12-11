@@ -9,6 +9,8 @@ import org.koin.core.context.startKoin
 import org.koin.test.KoinTest
 import org.koin.test.inject
 import org.mockito.Mock
+import org.mockito.Mockito.verify
+import org.mockito.MockitoAnnotations
 
 class ViewModelTest : KoinTest {
 
@@ -21,6 +23,7 @@ class ViewModelTest : KoinTest {
 
     @Before
     fun before() {
+        MockitoAnnotations.initMocks(this)
         startKoin {
             modules(appModule)
         }
@@ -29,13 +32,8 @@ class ViewModelTest : KoinTest {
     @Test
     fun `declareMock with KoinTest`() {
 
-        var uiData: String? = null
+        viewModelA.getTextData().observeForever(testObserver)
+        verify(testObserver).onChanged("Hello Koin: A")
 
-
-        viewModelA.getTextData().observeForever{
-            uiData = it
-        }
-
-        print(uiData)
     }
 }
