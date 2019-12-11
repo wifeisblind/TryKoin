@@ -1,6 +1,7 @@
 package com.example.trykoin
 
 import android.app.Application
+import com.example.trykoin.di.appModule
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin

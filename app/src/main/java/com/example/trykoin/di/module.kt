@@ -1,4 +1,4 @@
-package com.example.trykoin
+package com.example.trykoin.di
 
 import com.example.trykoin.apage.AViewModel
 import com.example.trykoin.bpage.BViewModel
