@@ -9,4 +9,8 @@
     <item android:id="@+id/b"
         android:icon="@drawable/ic_pets_black_24dp"
         android:title="B" />
+
+    <item android:id="@+id/c"
+        android:icon="@drawable/ic_power_black_24dp"
+        android:title="C" />
 </menu>

@@ -2,7 +2,7 @@ package com.example.trykoin
 
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
-import com.example.trykoin.di.test_module
+import com.example.trykoin.apage.AViewModel
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test

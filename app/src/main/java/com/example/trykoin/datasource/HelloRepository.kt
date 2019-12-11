@@ -1,4 +1,4 @@
-package com.example.trykoin
+package com.example.trykoin.datasource
 
 interface HelloRepository {
     fun giveHello(): String

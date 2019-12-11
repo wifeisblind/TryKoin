@@ -1,9 +1,10 @@
-package com.example.trykoin
+package com.example.trykoin.bpage
 
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import com.example.trykoin.datasource.HelloRepository
 
 class BViewModel(private val repo: HelloRepository) : ViewModel() {
     private val text: MutableLiveData<String> = MutableLiveData()
