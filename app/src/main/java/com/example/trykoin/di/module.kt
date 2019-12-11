@@ -1,5 +1,6 @@
 package com.example.trykoin.di
 
+import com.example.trykoin.SharedViewModel
 import com.example.trykoin.apage.AViewModel
 import com.example.trykoin.bpage.BViewModel
 import com.example.trykoin.cpage.CFragment
@@ -36,5 +37,8 @@ val appModule = module {
     }
     viewModel {
         BViewModel(get())
+    }
+    viewModel {
+        SharedViewModel()
     }
 }
