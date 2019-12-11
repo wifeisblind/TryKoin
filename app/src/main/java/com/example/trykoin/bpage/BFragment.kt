@@ -19,6 +19,9 @@ class BFragment : Fragment() {
     private val viewModel: BViewModel by viewModel()
 //    private val viewModel: BViewModel by sharedViewModel()
 
+    /**
+     * sharedViewModel生命週期是綁定activity
+     */
     private val sharedViewModel: SharedViewModel by sharedViewModel()
 
     override fun onCreateView(
