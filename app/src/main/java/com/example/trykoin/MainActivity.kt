@@ -1,5 +1,6 @@
 package com.example.trykoin
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.trykoin.apage.AFragment
@@ -27,6 +28,11 @@ class MainActivity : AppCompatActivity() {
             return@setOnNavigationItemSelectedListener true
         }
         navigator.selectedItemId = R.id.a
+
+        button.setOnClickListener {
+            startActivity(Intent(this, Main2Activity::class.java))
+            finish()
+        }
     }
 
 
