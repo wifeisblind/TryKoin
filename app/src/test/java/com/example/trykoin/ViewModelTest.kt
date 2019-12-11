@@ -14,6 +14,10 @@ import org.mockito.Mock
 import org.mockito.Mockito.verify
 import org.mockito.MockitoAnnotations
 
+/**
+ * KoinTest 就是KoinComponent，implement KoinComponent的class都
+ * 能使用inject(), get()
+ */
 class ViewModelTest : KoinTest {
 
     private val viewModelA: AViewModel by inject()
