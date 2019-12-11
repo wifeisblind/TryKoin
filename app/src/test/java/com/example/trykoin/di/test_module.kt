@@ -6,7 +6,7 @@ import com.example.trykoin.datasource.RepositoryTestImp
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
-val test_module = module {
+val testModule = module {
     single<HelloRepository> { RepositoryTestImp() }
     viewModel { AViewModel(get()) }
 }

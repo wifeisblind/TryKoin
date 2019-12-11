@@ -8,12 +8,14 @@ import android.view.ViewGroup
 import androidx.lifecycle.Observer
 import com.example.trykoin.R
 import kotlinx.android.synthetic.main.a_fragment.*
+import org.koin.android.viewmodel.ext.android.sharedViewModel
 import org.koin.android.viewmodel.ext.android.viewModel
 
 
 class AFragment : Fragment() {
 
     private val viewModel: AViewModel by viewModel()
+//    private val viewModel: AViewModel by sharedViewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

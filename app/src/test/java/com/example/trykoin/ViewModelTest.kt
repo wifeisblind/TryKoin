@@ -3,6 +3,7 @@ package com.example.trykoin
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.Observer
 import com.example.trykoin.apage.AViewModel
+import com.example.trykoin.di.testModule
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
@@ -26,7 +27,7 @@ class ViewModelTest : KoinTest {
     fun before() {
         MockitoAnnotations.initMocks(this)
         startKoin {
-            modules(appModule)
+            modules(testModule)
         }
     }
 
@@ -34,7 +35,7 @@ class ViewModelTest : KoinTest {
     fun `declareMock with KoinTest`() {
 
         viewModelA.getTextData().observeForever(testObserver)
-        verify(testObserver).onChanged("Hello Koin: A")
+        verify(testObserver).onChanged("Hello Test: A")
 
     }
 }

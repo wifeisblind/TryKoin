@@ -8,6 +8,7 @@ import android.view.ViewGroup
 
 import com.example.trykoin.R
 import kotlinx.android.synthetic.main.a_fragment.*
+import org.koin.android.ext.android.get
 import org.koin.android.ext.android.inject
 import org.koin.core.parameter.parametersOf
 
@@ -23,6 +24,8 @@ class CFragment : Fragment(), Contract.View {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+//        presenter = get { parametersOf(this) }
+
         presenter.loadData()
     }
 
